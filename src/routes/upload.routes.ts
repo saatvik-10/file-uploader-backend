@@ -4,8 +4,9 @@ import { Router } from 'express'
 
 const router = Router()
 
-const { uploadImage } = new UploadController()
+const { uploadFile, getFiles } = new UploadController()
 
-router.post('/', uploadSingleS3(), uploadImage)
+router.post('/', uploadSingleS3(), uploadFile)
+router.get('/', getFiles)
 
 export default router

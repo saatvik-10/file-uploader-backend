@@ -1,9 +1,11 @@
 import { Request, Response } from 'express'
 
 export interface IUploadController {
-  uploadImage(req: Request, res: Response): Promise<void>
+  uploadFile(req: Request, res: Response): Promise<void>
+  getFiles(req: Request, res: Response): Promise<void>
 }
 
 export interface IUploadService {
-  createImage(data: IFile): Promise<void>
+  uploadFile(data: IFile): Promise<void>
+  getFiles(): Promise<IFile[]>
 }

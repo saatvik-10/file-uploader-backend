@@ -43,7 +43,7 @@ export const uploadSingleS3 = (fieldName = 'file') => {
           key: getFileKey(fileName),
           url: fileURL,
         }
-        await uploadService.createImage(fileData)
+        await uploadService.uploadFile(fileData)
         req.fileData = fileData
         next()
       })
