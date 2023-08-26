@@ -42,6 +42,7 @@ export const uploadSingleS3 = (fieldName = 'file') => {
           ETag: s3Data.ETag,
           key: getFileKey(fileName),
           url: fileURL,
+          name: req.file.originalname,
         }
         await uploadService.uploadFile(fileData)
         req.fileData = fileData
