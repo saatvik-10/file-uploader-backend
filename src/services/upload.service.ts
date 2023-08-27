@@ -5,7 +5,7 @@ export default class UploadService implements IUploadService {
   async uploadFile(data: IFile): Promise<void> {
     await Upload.create(data)
   }
-  async getFiles(): Promise<IFile[]> {
-    return await Upload.find()
+  async getFiles(folder: string): Promise<IFile[]> {
+    return await Upload.find({ folder })
   }
 }

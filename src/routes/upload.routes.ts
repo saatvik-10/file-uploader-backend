@@ -6,7 +6,7 @@ const router = Router()
 
 const { uploadFile, getFiles } = new UploadController()
 
-router.post('/', uploadSingleS3(), uploadFile)
-router.get('/', getFiles)
+router.post('/:folder', uploadSingleS3(), uploadFile)
+router.get('/:folder', getFiles)
 
 export default router

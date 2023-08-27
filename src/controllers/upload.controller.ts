@@ -16,7 +16,7 @@ export default class UploadController implements IUploadController {
   }
   async getFiles(req: Request, res: Response) {
     try {
-      res.send(await uploadService.getFiles())
+      res.send(await uploadService.getFiles(req.params.folder ?? 'files'))
     } catch (err) {
       res.sendStatus(StatusCodes.INTERNAL_SERVER_ERROR)
     }

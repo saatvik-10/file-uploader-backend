@@ -18,6 +18,10 @@ const uploadSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    folder: {
+      type: String,
+      required: true,
+    },
   },
   { timestamps: true }
 )

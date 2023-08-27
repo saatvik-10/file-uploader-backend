@@ -43,6 +43,7 @@ export const uploadSingleS3 = (fieldName = 'file') => {
           key: getFileKey(fileName),
           url: fileURL,
           name: req.file.originalname,
+          folder: req.params.folder ?? 'files',
         }
         await uploadService.uploadFile(fileData)
         req.fileData = fileData

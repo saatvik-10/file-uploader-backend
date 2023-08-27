@@ -7,5 +7,5 @@ export interface IUploadController {
 
 export interface IUploadService {
   uploadFile(data: IFile): Promise<void>
-  getFiles(): Promise<IFile[]>
+  getFiles(folder: string): Promise<IFile[]>
 }

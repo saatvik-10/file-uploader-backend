@@ -3,4 +3,5 @@ interface IFile {
   ETag?: string
   url: string
   name: string
+  folder: string
 }
