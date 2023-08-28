@@ -16,6 +16,13 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use(routes)
 
+app.get('/', (req, res) => {
+  res.send({
+    github: 'https://github.com/chirag3003',
+    author: 'Chirag Bhalotia',
+  })
+})
+
 app.use('*', (_req, res) => {
   res.status(404).json({ error: '❌ Route not found!' })
 })
