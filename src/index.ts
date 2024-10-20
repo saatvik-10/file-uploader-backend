@@ -18,8 +18,8 @@ app.use(routes)
 
 app.get('/', (req, res) => {
   res.send({
-    github: 'https://github.com/chirag3003',
-    author: 'Chirag Bhalotia',
+    github: 'https://github.com/saatvik-10',
+    author: 'Saatvik Madan',
   })
 })
 
